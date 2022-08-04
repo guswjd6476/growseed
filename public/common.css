@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+article{
+    padding: 50px 20px;
+}
+.section{
+    padding: 50px 0px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+.navwrap{
+    padding:  20px;
+    display: flex;
+    justify-content: right;
+}
+
+.w1440{
+    width: 1440px;
+    margin: auto;
+}
+.w1240{
+    width: 1240px;
+    margin: auto;
+}
+.navi{
+    display: flex;
+}
+.navi>li{
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.img100{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.img100 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-position: right;
+    object-fit: cover;
+    z-index: -1;
+}
+.img100 .textwrap{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    text-align: left;
+}
+.introtext{
+    font-size: 50px;
+    font-weight: 900;
+    padding: 0 10px;
+}
+.subtitle{
+    padding: 0 20px;
+}
+.subtitle h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: green;
+}
+
+.textbox h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+.textbox h2{
+    font-size: 26px;
+}
+.subpg{
+    padding: 50px 0;
+}
+.divbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+.divbox .imgbox{
+    width: 40%;
+    margin-right: 20px;
+}
+.divbox .div_textbox{
+    width: calc(60% - 20px);
+}
+.div_textbox p{
+    font-size: 16px;
+    padding: 5px 0;
+}
+.bancon{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.banimg{
+    height: 400px;
+}
+.banimg .imgbox{
+    width: 100%;
+    height: 100%;
+}
+.bantext{
+    float: left;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+    padding: 20px 0;
+}
+.bantext .textbox{
+    text-align: center;
+}
+.blackb{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.blackb .textbox h1{
+    color: #fff;
+}
+.plr{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.subscribe{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.subscribe h4{
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.subscribe h6{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 15px 0px;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .w1440{
+        width: 100%;
+    } 
+
+}
+@media only screen and (max-width: 1240px) {
+    .w1240{
+        width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 900px) {
+    article{
+        padding: 40px 20px;
+    }
+    .section{
+        padding: 40px 0px;
+    }
+    .textbox h1{
+        font-size: 28px;
+    }
+    .textbox h2{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 720px) {
+    article{
+        padding: 30px 10px;
+    }
+    .section{
+        padding: 30px 0px;
+    }
+    .divbox{
+        display: block;
+    }
+    .divbox .imgbox{
+        width: 100%;
+    }
+    .divbox .div_textbox{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .plr{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .textbox h1{
+        font-size: 20px;
+    }
+    .textbox h2{
+        font-size: 18px;
+    }
+}
