@@ -1,32 +1,52 @@
 <template>
-  <div class="section">
+  <div class="section content">
     <div class="w1440 subtitle">
       <h1>PROMBLEM</h1>
     </div>
       <div class="subpg ">
-        <div class="problembox" v-for="problem in problems" v-bind:key="problem.title">
-          <div class="bancon">
-            <div class="w1240 banimg plr">
-              <div class="imgbox">
-                <img :src="problem.img1" alt="{{problem.art1}}">
+          <div class="problembox" v-for="problem in problems" v-bind:key="problem.title">
+            <div class="bancon">
+              <div class="w1240 banimg plr">
+                <div class="imgbox">
+                  <img :src="problem.img1" alt="{{problem.art1}}">
+                </div>
+              </div>
+              <div class="bantext" :style="{'background-color':problem.backcolor}">
+                <div class="w1240 plr textbox">
+                  <strong>
+                    <span :style="{'color':problem.fontcolor}">{{problem.name}} : {{problem.name_sub}}</span>
+                  </strong>
+                </div>
               </div>
             </div>
-            <div class="bantext" :style="{'background-color':problem.backcolor}">
-              <div class="w1240 plr textbox">
-                <h1>
-                  <span :style="{'color':problem.fontcolor}">{{problem.name}} : {{problem.name_sub}}</span>
-                </h1>
-              </div>
+            <div class="w1240 subscribe plr">
+              <h4>{{problem.subt1}}</h4>
+              <p>{{problem.subm1}}</p>
+              <p>{{problem.subm2}}</p>
+              <h6>{{problem.subt2}}</h6>
+              <p>{{problem.subm3}}</p>
             </div>
+          </div>  
+        <div class="w1240 onebox">
+          <div class="imgbox">
+            <img src="../../public/img/problem/gorwseed.jpg" alt="">
           </div>
-          <div class="w1240 subscribe plr">
-            <h4>{{problem.subt1}}</h4>
-            <p>{{problem.subm1}}</p>
-            <p>{{problem.subm2}}</p>
-            <h6>{{problem.subt2}}</h6>
-            <p>{{problem.subm3}}</p>
+          <div class="textbox plr">
+            <h1>
+              <span>GROW SEED 가 가진 과제</span>
+            </h1>
           </div>
-        </div>        
+          <div class="subscribe plr">
+            <h6>1. 지속가능한 발전을 위한 일상생활에서 가능한 UP-CYCLING</h6>
+            <p>플라스틱을 화분으로 만드는 작업을 통해 일상생활에서 만들어 나갈수 있는 UP-CYCLING을 실행합니다</p>
+            <h6>2. 환경문제에 대한 개선을 목표하는 소극적 참여와 적극적 참여</h6>
+            <p>한알의 씨앗을 심는 소극적 참여로 시작하여 푸르름을 넓히는 적극적 참여까지 다양한 활동을 실행합니다.</p>
+            <h6>3. 사회적 평화와 정의를 지향하는 가치관 개발</h6>
+            <p>사회적 평화와 발전을 지향하는 가치관 개발에 필요한 다양한 컨텐츠를 제작하며 지원합니다</p>
+            <h6>4. 일상속 삶의 질을 높일수 있는 취미와 라이프 밸런스</h6>
+            <p>'플랜테리어', '식집사' 외 MOU를 맺은 다양한 단체를 통해 삶의 질을 높일 수 있는 자기개발을 지원합니다.</p>
+          </div>
+        </div>      
       </div>
   </div>
 </template>

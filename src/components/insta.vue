@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section content">
     <div class="w1440 subtitle">
       <h1>INSTAGRAM</h1>
     </div>

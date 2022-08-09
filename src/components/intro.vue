@@ -1,6 +1,6 @@
 <template>
   <div >
-    <div class="img100">
+    <div class="img100 content">
       <img src="../../public/img/fullimg.jpg" alt="전구를업사이클링한화분">
       <div class="w1440 textwrap">
         <h1 class="introtext">WE HOPE Sustainable Development</h1>

@@ -2,14 +2,14 @@
 <nav  class="navbar" :class="{ 'navbar--hidden': !showNavbar }">
   <div class="w1440 navwrap">
     <div class="logo">
-      
+      <img src="../public/img/logo/logo.png" alt="">
     </div>
     <ul id="navi" class="navi" :class="{ 'navbar--hidden': !showNavbar }">
       <li v-on:click="gotointro">MAIN</li>
       <li v-on:click="gotoabout">ABOUT</li>
       <li v-on:click="gotoproblem">PROBLEM</li>
       <li v-on:click="gotoseed">SEED</li>
-      <li v-on:click="gotoinsta">INSTA</li>
+      <li v-on:click="gotoinsta">INSTAGRAM</li>
     </ul>
     <div id="btn_ham"  class="btn_ham">
       <span></span>
@@ -42,23 +42,38 @@ export default {
   name: 'App',
   data () {
     return {
-      showNavbar: true,
+     showNavbar: true,
       lastScrollPosition: 0
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.onScroll);
     const btn_h = document.getElementById('btn_ham')
     
     btn_h.addEventListener("click",function(){
+      const navwrap = document.querySelector('.navbar');
       const nav = document.querySelector('.navi')
       nav.classList.toggle('active');
+      navwrap.classList.add('navcolor');
     })
+
+const content = document.querySelector('.content');
+const nav = document.querySelector('.navbar');
+
+// 컨텐츠 영역부터 브라우저 최상단까지의 길이 구하기
+const contentTop = content.getBoundingClientRect().top + window.scrollY;
+
+window.addEventListener('scroll', function(){
+  if(window.scrollY > contentTop + 60){
+    nav.classList.add('navcolor');
+  }else{
+    nav.classList.remove('navcolor');
+  }
+});
+
   },
-  beforeUnmount () {
-    window.removeEventListener('scroll', this.onScroll)
-  },
+  
   methods: {
+    
     gotointro() {
       const intro = document.getElementById('intro')
       if(intro){
@@ -89,19 +104,7 @@ export default {
         insta.scrollIntoView({behavior : 'smooth'})
 
       }
-    },
-        
-    onScroll () {
-        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-        if (currentScrollPosition < 0) {
-          return
-        }
-        if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-          return
-        }
-        this.showNavbar = currentScrollPosition < this.lastScrollPosition
-        this.lastScrollPosition = currentScrollPosition
-      }
+    }
   },
   components: {
     intro,
@@ -116,4 +119,10 @@ export default {
 
 <style>
  
+#app{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
 </style>

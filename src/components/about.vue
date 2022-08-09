@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section content">
     <div class="w1440 subtitle">
       <h1>ABOUT</h1>
     </div>
@@ -61,30 +61,10 @@ export default {
       }
     ]
   }
-  },
-  mounted () {
-    (function() {
-	const outputElem = document.querySelector('.output');
-	const imageElem = document.querySelector('.image');
-
-	function showValue() {
-		let posY = imageElem.getBoundingClientRect().top;
-		outputElem.innerHTML = posY;
-
-		if (posY < window.innerHeight * 0.2) {
-			imageElem.classList.add('zoom');
-		}
-        
-		else {
-			imageElem.classList.remove('zoom');
-		}
-	}
-
-	window.addEventListener('scroll', function() {
-		showValue();
-	});
-
-})();
   }
 }
 </script>
+
+<style scoped>
+
+</style>
