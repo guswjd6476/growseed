@@ -28,10 +28,9 @@ article{
     top: 0;
     z-index: 10;
     width: 100%;
-}
-.navbar.navcolor{
     background-color: rgba(225, 225, 225, 0.5);
 }
+
 .navwrap{
     padding: 10px 20px;
     display: flex;
