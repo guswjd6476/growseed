@@ -89,6 +89,7 @@ article{
     transform: translate(-50%,-50%);
     left: 50%;
     text-align: left;
+    padding: 0px 10px;
 }
 .introtext{
     font-size: 50px;

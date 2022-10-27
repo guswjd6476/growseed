@@ -40,5 +40,17 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guswjd6476/growseed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guswjd6476/growseed/issues"
+  },
+  "homepage": "https://github.com/guswjd6476/growseed#readme"
 }
